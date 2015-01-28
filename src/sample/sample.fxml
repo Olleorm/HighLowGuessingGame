@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml" fx:controller="sample.Controller">
+<children>
+    <VBox fx:id="VBoxMain" alignment="TOP_CENTER" prefHeight="500.0" prefWidth="400.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="20.0">
+        <children>
+            <Label fx:id="systemOut" text="bjl" alignment="CENTER" prefHeight="200.0">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+            <Label  fx:id="numberGuesslable" text="Guess counter:" />
+            <Label  fx:id="guesslable" text="Guess a number" />
+            <TextField fx:id="txtAddItem"  prefWidth="200.0" />
+            <HBox id="HBox" fx:id="HBox4Btns" alignment="CENTER" spacing="5.0">
+                <children>
+                    <Button mnemonicParsing="false" onAction="#guess" text="Guess"/>
+                    <Button mnemonicParsing="false" onAction="#getNewNumber" text="New Number"/>
+                </children>
+            </HBox>
+        </children>
+    </VBox>
+</children>
+</AnchorPane>

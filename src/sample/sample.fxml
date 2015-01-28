@@ -3,21 +3,21 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml" fx:controller="sample.Controller">
+<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml" fx:controller="sample.Controller">
 <children>
     <VBox fx:id="VBoxMain" alignment="TOP_CENTER" prefHeight="500.0" prefWidth="400.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="20.0">
         <children>
-            <Label fx:id="systemOut" text="bjl" alignment="CENTER" prefHeight="200.0">
+            <Label fx:id="systemOut" text="Hello :D" alignment="CENTER" prefHeight="200.0">
                 <font>
                     <Font name="System Bold" size="18.0" />
                 </font>
             </Label>
-            <Label  fx:id="numberGuesslable" text="Guess counter:" />
+            <Label  fx:id="numberGuessLabel" text="Guess counter:" />
             <Label  fx:id="guesslable" text="Guess a number" />
-            <TextField fx:id="txtAddItem"  prefWidth="200.0" />
+            <TextField fx:id="txtAddItem"  prefWidth="200.0" onKeyPressed="#handleEnterPressed" />
             <HBox id="HBox" fx:id="HBox4Btns" alignment="CENTER" spacing="5.0">
                 <children>
-                    <Button mnemonicParsing="false" onAction="#guess" text="Guess"/>
+                    <Button mnemonicParsing="false" onAction="#guessButton" text="Guess"/>
                     <Button mnemonicParsing="false" onAction="#getNewNumber" text="New Number"/>
                 </children>
             </HBox>

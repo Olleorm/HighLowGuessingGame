@@ -19,9 +19,9 @@
                 <children>
                     <Button mnemonicParsing="false" onAction="#guessButton" text="Guess"/>
                     <Button mnemonicParsing="false" onAction="#getNewNumber" text="New Number"/>
-                    <TextField fx:id="fromAddItem"  prefWidth="50.0" onKeyPressed="#handleEnterPressed" />
+                    <TextField fx:id="fromAddItem"  prefWidth="50.0"/>
                     <Label  fx:id="fromToo" text="-" />
-                    <TextField fx:id="tooAddItem"  prefWidth="50.0" onKeyPressed="#handleEnterPressed" />
+                    <TextField fx:id="tooAddItem"  prefWidth="50.0"/>
                 </children>
             </HBox>
         </children>

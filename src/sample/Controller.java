@@ -15,12 +15,16 @@ public class Controller {
     @FXML private TextField fromAddItem;
     @FXML private TextField toAddItem;
     @FXML private Label systemOut;
-    static Random rand = new Random();
-    boolean isInt;
-    int randomNumberFrom = 1;
-    int randomNumberTo = 10;
-    int numberGuess = 0;
-    int theRandomNumber = randomInt(randomNumberFrom, randomNumberTo);
+    private static Random rand = new Random();
+    private boolean isInt;
+    public int randomNumberFrom = 1;
+    public int randomNumberTo = 10;
+    private int numberGuess = 0;
+    private int theRandomNumber = randomInt(randomNumberFrom, randomNumberTo);
+
+    public int getTheRandomNumber() {
+        return theRandomNumber;
+    }
 
     public static int randomInt(int from, int to) {
         return rand.nextInt(to - from + 1) + from;
@@ -44,8 +48,8 @@ public class Controller {
             isInt = false;
             return 0;
         }else{
-        isInt = true;
-        return Integer.parseInt(textField.getText());
+            isInt = true;
+            return Integer.parseInt(textField.getText());
         }
     }
 
@@ -59,7 +63,7 @@ public class Controller {
         }
     }
 
-    @FXML private void getNewNumber(ActionEvent action){
+    @FXML public void getNewNumber(ActionEvent action){
         int fromInt = textInt(fromAddItem);
         if (isInt == true) {
             int toInt = textInt(toAddItem);
@@ -76,7 +80,7 @@ public class Controller {
         }
     }
 
-    @FXML public void handleEnterPressed(KeyEvent event) {
+    @FXML private void handleEnterPressed(KeyEvent event) {
         if (event.getCode() == KeyCode.ENTER) {
             guessing(textInt(txtAddItem));
         }

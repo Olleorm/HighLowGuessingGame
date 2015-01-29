@@ -15,13 +15,11 @@ public class Controller {
     @FXML private TextField fromAddItem;
     @FXML private TextField toAddItem;
     @FXML private Label systemOut;
-    String textIn;
     static Random rand = new Random();
     boolean isInt;
     int randomNumberFrom = 1;
     int randomNumberTo = 10;
     int numberGuess = 0;
-    int numberIn;
     int theRandomNumber = randomInt(randomNumberFrom, randomNumberTo);
 
     public static int randomInt(int from, int to) {
@@ -41,7 +39,6 @@ public class Controller {
     }
 
     public int textInt(TextField textField) {
-        textIn = (textField.getText());
         if(!textField.getText().matches("^\\d+$")) {
             systemOut.setText("Pleas enter a number");
             isInt = false;

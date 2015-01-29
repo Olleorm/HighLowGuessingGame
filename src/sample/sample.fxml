@@ -21,7 +21,7 @@
                     <Button mnemonicParsing="false" onAction="#getNewNumber" text="New Number"/>
                     <TextField fx:id="fromAddItem"  prefWidth="50.0"/>
                     <Label  fx:id="fromToo" text="-" />
-                    <TextField fx:id="tooAddItem"  prefWidth="50.0"/>
+                    <TextField fx:id="toAddItem"  prefWidth="50.0"/>
                 </children>
             </HBox>
         </children>

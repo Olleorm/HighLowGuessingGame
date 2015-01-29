@@ -13,7 +13,7 @@ public class Controller {
     @FXML private Label numberGuessLabel;
     @FXML private TextField txtAddItem;
     @FXML private TextField fromAddItem;
-    @FXML private TextField tooAddItem;
+    @FXML private TextField toAddItem;
     @FXML private Label systemOut;
     String textIn;
     static Random rand = new Random();
@@ -65,12 +65,14 @@ public class Controller {
     @FXML private void getNewNumber(ActionEvent action){
         int fromInt = textInt(fromAddItem);
         if (isInt == true) {
-            int tooInt = textInt(tooAddItem);
-            if (isInt == true && fromInt < tooInt) {
+            int toInt = textInt(toAddItem);
+            if (isInt == true && fromInt < toInt) {
                 numberGuess = 0;
                 numberGuessLabel.setText("Guess counter:" + numberGuess);
-                theRandomNumber = randomInt(fromInt, tooInt);
-                guessLabel.setText("Guess a number:" + fromInt + "-" + tooInt);
+                theRandomNumber = randomInt(fromInt, toInt);
+                randomNumberFrom = fromInt;
+                randomNumberTo = toInt;
+                guessLabel.setText("Guess a number:" + fromInt + "-" + toInt);
             } else{
                 systemOut.setText("The second number must be bigger then the first");
             }

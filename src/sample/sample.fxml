@@ -12,13 +12,16 @@
                     <Font name="System Bold" size="18.0" />
                 </font>
             </Label>
-            <Label  fx:id="numberGuessLabel" text="Guess counter:" />
-            <Label  fx:id="guesslable" text="Guess a number" />
+            <Label  fx:id="numberGuessLabel" text="Guess counter:0" />
+            <Label  fx:id="guessLabel" text="Guess a number:1-10" />
             <TextField fx:id="txtAddItem"  prefWidth="200.0" onKeyPressed="#handleEnterPressed" />
             <HBox id="HBox" fx:id="HBox4Btns" alignment="CENTER" spacing="5.0">
                 <children>
                     <Button mnemonicParsing="false" onAction="#guessButton" text="Guess"/>
                     <Button mnemonicParsing="false" onAction="#getNewNumber" text="New Number"/>
+                    <TextField fx:id="fromAddItem"  prefWidth="50.0" onKeyPressed="#handleEnterPressed" />
+                    <Label  fx:id="fromToo" text="-" />
+                    <TextField fx:id="tooAddItem"  prefWidth="50.0" onKeyPressed="#handleEnterPressed" />
                 </children>
             </HBox>
         </children>

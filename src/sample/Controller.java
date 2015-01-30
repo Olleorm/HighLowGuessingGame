@@ -16,7 +16,6 @@ public class Controller {
     @FXML private TextField toAddItem;
     @FXML private Label systemOut;
     private static Random rand = new Random();
-    private boolean isInt;
     public int randomNumberFrom = 1;
     public int randomNumberTo = 10;
     private int numberGuess = 0;
@@ -45,16 +44,14 @@ public class Controller {
     public int textInt(TextField textField) {
         if(!textField.getText().matches("^\\d+$")) {
             systemOut.setText("Pleas enter a number");
-            isInt = false;
-            return 0;
+            return -1;
         }else{
-            isInt = true;
             return Integer.parseInt(textField.getText());
         }
     }
 
     public void guessing(int numberIn){
-        if (isInt == true) {
+        if (numberIn >= 0) {
             if (numberIn < randomNumberFrom || numberIn > randomNumberTo) {
                 systemOut.setText("Pleas enter number: " + randomNumberFrom + "-" + randomNumberTo);
             } else {
@@ -65,9 +62,9 @@ public class Controller {
 
     @FXML public void getNewNumber(ActionEvent action){
         int fromInt = textInt(fromAddItem);
-        if (isInt == true) {
+        if (fromInt >= 0) {
             int toInt = textInt(toAddItem);
-            if (isInt == true && fromInt < toInt) {
+            if (toInt >= 0 && fromInt < toInt) {
                 numberGuess = 0;
                 numberGuessLabel.setText("Guess counter:" + numberGuess);
                 theRandomNumber = randomInt(fromInt, toInt);

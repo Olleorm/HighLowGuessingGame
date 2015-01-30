@@ -16,13 +16,26 @@ public class Controller {
     @FXML private TextField toAddItem;
     @FXML private Label systemOut;
     private static Random rand = new Random();
-    public int randomNumberFrom = 1;
-    public int randomNumberTo = 10;
+    private int randomNumberFrom = 1;
+    private int randomNumberTo = 10;
     private int numberGuess = 0;
     private int theRandomNumber = randomInt(randomNumberFrom, randomNumberTo);
 
     public int getTheRandomNumber() {
         return theRandomNumber;
+    }
+
+    public void setRandomNumberBounds(int low, int high) {
+        this.randomNumberFrom = low;
+        this.randomNumberTo = high;
+    }
+
+    public int getRandomNumberFrom() {
+        return randomNumberFrom;
+    }
+
+    public int getRandomNumberTo() {
+        return randomNumberTo;
     }
 
     public static int randomInt(int from, int to) {

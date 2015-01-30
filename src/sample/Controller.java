@@ -92,7 +92,7 @@ public class Controller {
 
     @FXML private void handleEnterPressed(KeyEvent event) {
         if (event.getCode() == KeyCode.ENTER) {
-            guessing(textInt(txtAddItem));
+            guessButton(null);
         }
     }
 

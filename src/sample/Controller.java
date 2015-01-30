@@ -15,7 +15,7 @@ public class Controller {
     @FXML private TextField fromAddItem;
     @FXML private TextField toAddItem;
     @FXML private Label systemOut;
-    private static Random rand = new Random();
+    private static final Random rand = new Random();
     private int randomNumberFrom = 1;
     private int randomNumberTo = 10;
     private int guessCount = 0;

@@ -18,7 +18,7 @@ public class Controller {
     private static Random rand = new Random();
     private int randomNumberFrom = 1;
     private int randomNumberTo = 10;
-    private int numberGuess = 0;
+    private int guessCount = 0;
     private int theRandomNumber = randomInt(randomNumberFrom, randomNumberTo);
 
     public int getTheRandomNumber() {
@@ -43,8 +43,8 @@ public class Controller {
     }
 
     public void countGuess(int numberIn) {
-        numberGuess++;
-        numberGuessLabel.setText("Guess counter:" + numberGuess);
+        guessCount++;
+        numberGuessLabel.setText("Guess counter:" + guessCount);
         if (numberIn < theRandomNumber) {
             systemOut.setText("Too low");
         } else if (numberIn > theRandomNumber) {
@@ -78,8 +78,8 @@ public class Controller {
         if (fromInt >= 0) {
             int toInt = textInt(toAddItem);
             if (toInt >= 0 && fromInt < toInt) {
-                numberGuess = 0;
-                numberGuessLabel.setText("Guess counter:" + numberGuess);
+                guessCount = 0;
+                numberGuessLabel.setText("Guess counter:" + guessCount);
                 theRandomNumber = randomInt(fromInt, toInt);
                 randomNumberFrom = fromInt;
                 randomNumberTo = toInt;
